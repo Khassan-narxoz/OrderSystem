@@ -6,7 +6,7 @@ export const authHeader = () => {
     return token ? { Authorization: `Bearer ${token}` } : {};
 };
 
-const API_URL = 'http://127.0.0.1:8000/api';
+const API_URL = 'https://ordersystem-a6me.onrender.com/api';
 
 export const loginUser = async (userData) => {
   return await axios.post(`${API_URL}/login`, userData);
