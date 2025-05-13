@@ -1,0 +1,136 @@
+.card_fancy_1 {
+    background: linear-gradient(135deg, #f4f4f9, #fff);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    width:300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .card_fancy_1:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+  }
+  
+  .imageWrapper_fancy_1 {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .image_fancy_1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: scale 0.4s ease;
+  }
+  
+  .image_fancy_1:hover {
+    scale: 1.05;
+  }
+  
+  .details_fancy_1 {
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .title_fancy_1 {
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .price_fancy_1,
+  .stock_fancy_1 {
+    margin: 4px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .priceValue_fancy_1 {
+    color: #2e7d32;
+    font-weight: 600;
+  }
+  
+  .stockValue_fancy_1 {
+    color: #0277bd;
+    font-weight: 600;
+  }
+  
+  .actions_fancy_1 {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .quantityLabel_fancy_1 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #444;
+  }
+  
+  .quantityInput_fancy_1 {
+    width: 60px;
+    padding: 6px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .addToOrderButton_fancy_1 {
+    background-color: #1565c0;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+  }
+  
+  .addToOrderButton_fancy_1:hover {
+    background-color: #0d47a1;
+  }
+  
+  .adminActions_fancy_1 {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  
+  .editButton_fancy_1,
+  .deleteButton_fancy_1 {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .editButton_fancy_1 {
+    background-color:rgb(7, 90, 255);
+    color: white;
+  }
+  
+  .editButton_fancy_1:hover {
+    background-color:rgb(8, 47, 175);
+  }
+  
+  .deleteButton_fancy_1 {
+    background-color: #e53935;
+    color: white;
+  }
+  
+  .deleteButton_fancy_1:hover {
+    background-color: #c62828;
+  }
+  

@@ -1,0 +1,86 @@
+.registerContainer {
+    max-width: 480px;
+    margin: 80px auto;
+    background: linear-gradient(135deg, #ffffff, #f1f5ff);
+    border-radius: 20px;
+    padding: 50px 35px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    animation: fadeSlide 0.5s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .registerTitle {
+    font-size: 32px;
+    font-weight: 800;
+    color: #2d2d2d;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+  }
+  
+  .registerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .registerInput {
+    padding: 14px 18px;
+    font-size: 17px;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .registerInput:focus {
+    border-color: #7b5cff;
+    box-shadow: 0 0 0 4px rgba(123, 92, 255, 0.2);
+    background-color: #f8f9ff;
+  }
+  
+  .registerButton {
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .registerButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 114, 255, 0.4);
+  }
+  
+  @keyframes fadeSlide {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .redirectText {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .redirectLink {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 5px;
+    font-weight: bold;
+  }
+  
+  .redirectLink:hover {
+    text-decoration: underline;
+  }
+  

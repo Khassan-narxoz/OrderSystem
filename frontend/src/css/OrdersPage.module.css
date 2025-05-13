@@ -1,0 +1,129 @@
+.ordersContainer {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #0d6efd;
+    animation: fadeIn 1s ease;
+  }
+  
+  .loading,
+  .empty {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 3rem;
+    color: #888;
+  }
+  
+  .orderCard {
+    background: #f9f9f9;
+    border-left: 6px solid #0d6efd;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.5s ease;
+  }
+  
+  .orderHeader {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .userInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 0.8rem;
+    background: #e9f2ff;
+    border-radius: 8px;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #0d6efd;
+  }
+  
+  .productList {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  
+  .productItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .productImage {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .productInfo {
+    flex: 1;
+  }
+  
+  .productTitle {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .productDetails,
+  .productTotal {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .totalPrice {
+    text-align: right;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #0d6efd;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
