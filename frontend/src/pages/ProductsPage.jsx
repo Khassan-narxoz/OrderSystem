@@ -12,8 +12,6 @@ export default function ProductsPage() {
   const [productToEdit, setProductToEdit] = useState(null);
   const [orderItems, setOrderItems] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [shippingCost, setShippingCost] = useState(1000);
-
 
   const { user } = useContext(AuthContext);
 
@@ -102,7 +100,7 @@ export default function ProductsPage() {
     if (orderItems.length === 0) return;
   
     const orderData = {
-      shipping_cost: shippingCost,
+      shipping_cost: 1500,
       items: orderItems.map(item => ({
         product_id: item.id,
         quantity: item.quantity
@@ -170,8 +168,8 @@ export default function ProductsPage() {
                     ))}
                   </ul>
                   <div className={styles.total_fancy_1}>
-                    <p>Доставка: {shippingCost} ₸</p>
-                    <strong>Итог: {totalAmount + shippingCost} ₸</strong>
+                    <p>Доставка: {1500} ₸</p>
+                    <strong>Итог: {totalAmount + 1500} ₸</strong>
                     </div>
 
                     <button className={styles.checkoutButton_fancy_1} onClick={handleCheckout}>
