@@ -15,18 +15,19 @@ class SendOrderNotificationJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    public $order;
+    public $orderId;
 
-    public function __construct(Order $order)
+    public function __construct($orderId)
     {
-        $this->order = $order;
+        $this->orderId = $orderId;
     }
 
     public function handle(): void
     {
-        $order = $this->order->load('user');
+        $order = Order::with('user')->find($this->orderId);
 
-        Mail::to($order->user->email)->send(new OrderCreatedMail($order));
+        if ($order && $order->user) {
+            Mail::to($order->user->email)->send(new OrderCreatedMail($order));
+        }
     }
-
 }

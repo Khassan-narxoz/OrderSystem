@@ -35,13 +35,11 @@ class OrderController extends Controller
                 }
             }
 
-            // Создание заказа
             $order = Order::create([
                 'user_id' => $user->id,
                 'shipping_cost' => $validated['shipping_cost'],
             ]);
 
-            // Привязка продуктов к заказу и обновление остатков
             foreach ($validated['items'] as $item) {
                 OrderProduct::create([
                     'order_id' => $order->id,
@@ -56,9 +54,7 @@ class OrderController extends Controller
 
             DB::commit();
 
-            // Отправка уведомления (проверьте работоспособность очереди)
-            SendOrderNotificationJob::dispatch($order);
-
+            SendOrderNotificationJob::dispatch($order->id);
             return response()->json(['message' => 'Заказ успешно оформлен'], 201);
 
         } catch (\Exception $e) {
