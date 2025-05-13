@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { useNavigate, Outlet } from 'react-router-dom';
 import 'boxicons/css/boxicons.min.css';
 import { useContext } from 'react';
 import { ToastContainer} from 'react-toastify';
@@ -7,9 +7,10 @@ import MainPage from './pages/MainPage';
 import {AuthContext} from './context/AuthContext';
 
 export default function App() {
+  const navigate = useNavigate();
   const { user } = useContext(AuthContext);
-  if (user) {
-    console.log(user)
+  if (!user) {
+    navigate('/login');
   }
   return (
     <div>
