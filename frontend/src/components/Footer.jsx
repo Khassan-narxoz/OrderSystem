@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Footer.css'; // Өз қалауыңызша CSS қосыңыз
+import '../css/Footer.css';
 
 export default function Footer() {
   return (

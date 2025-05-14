@@ -12,10 +12,12 @@ export default function Navbar() {
   const navigate = useNavigate();
   const [isModalOpen, setModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
   const [error, setError] = useState(null);
 
   const handleModalOpen = () => setModalOpen(true);
   const handleModalClose = () => setModalOpen(false);
+  const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
   const handleCreateProduct = async (formData) => {
     try {
@@ -41,8 +43,12 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles['navbar-logo']}>Order Control</div>
-
-      <ul className={styles['navbar-links']}>
+      <div className={styles.hamburger} onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul className={`${styles['navbar-links']} ${isMenuOpen ? styles.open : ''}`}>
         <li className={styles.li}><Link to="/">Home</Link></li>
         <li className={styles.li}><Link to="/products">Список товаров</Link></li>
         {user?.role === 'Admin' ? (

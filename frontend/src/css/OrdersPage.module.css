@@ -127,3 +127,68 @@
     }
   }
   
+  @media (max-width: 768px) {
+    .ordersContainer {
+      padding: 1rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .orderCard {
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .orderHeader {
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+    }
+  
+    .userInfo {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.6rem;
+    }
+  
+    .avatar {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .productItem {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.6rem;
+    }
+  
+    .productImage {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      border-radius: 6px;
+    }
+  
+    .productInfo {
+      width: 100%;
+    }
+  
+    .productTitle {
+      font-size: 0.95rem;
+    }
+  
+    .productDetails,
+    .productTotal {
+      font-size: 0.85rem;
+    }
+  
+    .totalPrice {
+      font-size: 1rem;
+      text-align: left;
+    }
+  }
+  

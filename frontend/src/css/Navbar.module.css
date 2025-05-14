@@ -1,11 +1,11 @@
 :root {
-  --main-bg: #1f2937;       /* Dark slate */
-  --accent-bg: #374151;     /* Medium dark */
-  --highlight: #facc15;     /* Amber yellow */
-  --text-light: #f3f4f6;    /* Light gray */
-  --text-dark: #111827;     /* Almost black */
-  --button-bg: #3b82f6;     /* Blue-500 */
-  --button-hover: #2563eb;  /* Blue-600 */
+  --main-bg: #1f2937;
+  --accent-bg: #374151;
+  --highlight: #facc15;
+  --text-light: #f3f4f6;
+  --text-dark: #111827;
+  --button-bg: #3b82f6;
+  --button-hover: #2563eb;
   --button-text: #ffffff;
 }
 
@@ -14,12 +14,12 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--main-bg);
-  padding: 16px 48px;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 16px;
+  padding: 16px 24px;
   color: var(--text-light);
   border-bottom: 2px solid var(--accent-bg);
-  transition: background-color 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  z-index: 10;
 }
 
 .navbar-logo {
@@ -34,6 +34,18 @@
   transform: scale(1.03);
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: var(--text-light);
+}
 .navbar-links {
   display: flex;
   align-items: center;
@@ -82,7 +94,7 @@
   background-color: var(--accent-bg);
   padding: 8px 16px;
   border-radius: 12px;
-  transition: background-color 0.2s ease;
+  flex-wrap: wrap;
 }
 
 .avatar {
@@ -115,4 +127,26 @@
 .logout-button:hover {
   background-color: var(--highlight);
   color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: var(--main-bg);
+    gap: 16px;
+    padding: 20px;
+    display: none;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
 }
